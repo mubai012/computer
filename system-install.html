@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系统安装/重装教程 - Computer World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">💻</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="tutorial.html?type=desktop" class="nav-link">台式电脑安装</a></li>
+                <li class="nav-item"><a href="tutorial.html?type=laptop" class="nav-link">笔记本电脑</a></li>
+                <li class="nav-item"><a href="system-install.html" class="nav-link">系统安装/重装</a></li>
+                <li class="nav-item"><a href="troubleshooting.html" class="nav-link">故障排除</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">关于我们</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <!-- 教程标题 -->
+    <div class="tutorial-container">
+        <header class="tutorial-header">
+            <h1 class="tutorial-title">系统安装/重装教程</h1>
+            <p class="tutorial-subtitle">学习如何安装和重装电脑系统，包括从U盘安装、正常系统内安装和系统镜像安装。</p>
+        </header>
+
+        <!-- 教程模块 -->
+        <div class="system-modules">
+            <!-- 模块1：新硬盘从U盘安装系统 -->
+            <div class="system-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">1</div>
+                    <h2 class="module-title">新硬盘从U盘安装系统</h2>
+                </div>
+                <div class="module-content">
+                    <p>当电脑硬盘是新的或需要完全重装系统时，可以通过U盘启动来安装系统。以下是详细步骤：</p>
+                    
+                    <div class="step">
+                        <h3>步骤1：准备工作</h3>
+                        <ul>
+                            <li>一个至少8GB的U盘</li>
+                            <li>Windows或其他操作系统的ISO镜像文件</li>
+                            <li>U盘启动盘制作工具（如Rufus、UltraISO等）</li>
+                            <li>一台可以正常使用的电脑</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>步骤2：制作U盘启动盘</h3>
+                        <ol>
+                            <li>下载并安装U盘启动盘制作工具</li>
+                            <li>插入U盘，打开制作工具</li>
+                            <li>选择下载好的系统ISO镜像文件</li>
+                            <li>选择U盘作为目标设备</li>
+                            <li>点击开始制作，等待完成</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>步骤3：设置电脑从U盘启动</h3>
+                        <p>不同厂家的主板进入BIOS/UEFI的按键不同，以下是常见品牌的按键：</p>
+                        <table class="bios-table">
+                            <thead>
+                                <tr>
+                                    <th>品牌</th>
+                                    <th>进入BIOS/UEFI按键</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>华硕（ASUS）</td><td>Del 或 F2</td></tr>
+                                <tr><td>技嘉（GIGABYTE）</td><td>Del 或 F2</td></tr>
+                                <tr><td>微星（MSI）</td><td>Del 或 F2</td></tr>
+                                <tr><td>映泰（BIOSTAR）</td><td>Del</td></tr>
+                                <tr><td>华擎（ASRock）</td><td>Del 或 F2</td></tr>
+                                <tr><td>英特尔（Intel）</td><td>F2</td></tr>
+                                <tr><td>戴尔（Dell）</td><td>F2 或 F12</td></tr>
+                                <tr><td>惠普（HP）</td><td>F10 或 Esc + F10</td></tr>
+                                <tr><td>联想（Lenovo）</td><td>F2 或 F1</td></tr>
+                                <tr><td>ThinkPad</td><td>Enter + F1</td></tr>
+                                <tr><td>宏碁（Acer）</td><td>F2 或 Del</td></tr>
+                                <tr><td>神舟（HASEE）</td><td>Del 或 F2</td></tr>
+                                <tr><td>机械革命（MECHREVO）</td><td>Del</td></tr>
+                                <tr><td>雷神（ThundeRobot）</td><td>Del</td></tr>
+                            </tbody>
+                        </table>
+                        <p>设置从U盘启动的步骤：</p>
+                        <ol>
+                            <li>将制作好的U盘插入电脑</li>
+                            <li>开机或重启电脑，快速按下对应的BIOS按键</li>
+                            <li>进入BIOS/UEFI界面后，找到启动选项（Boot Options）</li>
+                            <li>将U盘设置为第一启动项</li>
+                            <li>保存设置并退出（通常按F10）</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>步骤4：安装系统</h3>
+                        <ol>
+                            <li>电脑重启后会从U盘启动，进入系统安装界面</li>
+                            <li>选择语言、时间和键盘输入方法</li>
+                            <li>点击"现在安装"</li>
+                            <li>输入产品密钥（如果没有可以选择"我没有产品密钥"）</li>
+                            <li>选择要安装的系统版本</li>
+                            <li>接受许可条款</li>
+                            <li>选择"自定义：仅安装Windows（高级）"</li>
+                            <li>对硬盘进行分区（新硬盘需要先创建分区）</li>
+                            <li>选择安装位置，点击"下一步"</li>
+                            <li>等待系统安装完成，电脑会自动重启</li>
+                            <li>完成后续设置（用户名、密码等）</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块2：正常开机时下载和安装系统 -->
+            <div class="system-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">2</div>
+                    <h2 class="module-title">正常开机时下载和安装系统</h2>
+                </div>
+                <div class="module-content">
+                    <p>当电脑可以正常开机和进入系统时，可以直接在系统内下载和安装新版本的系统。</p>
+                    
+                    <div class="step">
+                        <h3>Windows系统更新安装</h3>
+                        <ol>
+                            <li>打开"设置"（Win + I）</li>
+                            <li>点击"更新和安全"</li>
+                            <li>点击"Windows 更新"</li>
+                            <li>点击"检查更新"</li>
+                            <li>如果有可用更新，点击"下载并安装"</li>
+                            <li>等待更新下载完成，然后点击"立即重启"</li>
+                            <li>电脑会自动完成更新安装</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>使用媒体创建工具升级</h3>
+                        <ol>
+                            <li>访问微软官方网站，下载Windows 10/11媒体创建工具</li>
+                            <li>运行媒体创建工具</li>
+                            <li>选择"立即升级这台电脑"，点击"下一步"</li>
+                            <li>接受许可条款</li>
+                            <li>选择要保留的内容（文件、设置和应用或仅文件）</li>
+                            <li>点击"安装"，等待升级完成</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>Linux系统安装</h3>
+                        <p>对于Linux系统，可以通过以下方式安装：</p>
+                        <ol>
+                            <li>访问Linux发行版官方网站，下载ISO镜像</li>
+                            <li>使用虚拟机软件（如VirtualBox、VMware）直接安装</li>
+                            <li>或使用WSL（Windows Subsystem for Linux）在Windows内安装</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块3：安装系统镜像 -->
+            <div class="system-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">3</div>
+                    <h2 class="module-title">安装系统镜像</h2>
+                </div>
+                <div class="module-content">
+                    <p>系统镜像是完整的系统安装文件，可以通过多种方式安装。以下是常见的安装方法：</p>
+                    
+                    <div class="mirror-link-section">
+                        <h3>推荐系统镜像下载链接</h3>
+                        <p>您可以从以下官方网站下载可靠的系统镜像：</p>
+                        <ul class="mirror-links">
+                            <li><a href="https://www.microsoft.com/zh-cn/software-download/windows11" target="_blank" class="btn btn-primary">下载 Windows 11 镜像</a></li>
+                            <li><a href="https://www.microsoft.com/zh-cn/software-download/windows10" target="_blank" class="btn btn-primary">下载 Windows 10 镜像</a></li>
+                            <li><a href="https://ubuntu.com/download" target="_blank" class="btn btn-primary">下载 Ubuntu 镜像</a></li>
+                            <li><a href="https://www.debian.org/download" target="_blank" class="btn btn-primary">下载 Debian 镜像</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>方法1：使用虚拟光驱安装</h3>
+                        <ol>
+                            <li>下载系统ISO镜像文件</li>
+                            <li>右键点击ISO文件，选择"挂载"（Windows 10/11内置功能）</li>
+                            <li>打开挂载的虚拟光驱，运行setup.exe</li>
+                            <li>按照提示完成系统安装</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>方法2：使用第三方虚拟光驱软件</h3>
+                        <ol>
+                            <li>下载并安装虚拟光驱软件（如Daemon Tools、PowerISO等）</li>
+                            <li>打开虚拟光驱软件，加载ISO镜像文件</li>
+                            <li>打开虚拟光驱，运行安装程序</li>
+                            <li>按照提示完成系统安装</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>方法3：使用PE系统安装</h3>
+                        <ol>
+                            <li>制作PE启动盘（如微PE、大白菜PE等）</li>
+                            <li>将系统ISO镜像文件复制到PE启动盘中</li>
+                            <li>从PE启动盘启动电脑</li>
+                            <li>在PE系统中，使用安装工具（如CGI备份还原工具）安装系统镜像</li>
+                            <li>选择系统镜像文件和安装位置</li>
+                            <li>点击"安装"，等待完成后重启电脑</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>方法4：使用网络安装</h3>
+                        <p>某些Linux发行版支持网络安装，可以通过以下方式：</p>
+                        <ol>
+                            <li>下载网络安装镜像或使用PXE启动</li>
+                            <li>从网络安装镜像启动电脑</li>
+                            <li>按照提示连接网络</li>
+                            <li>选择要安装的软件包和组件</li>
+                            <li>等待系统从网络下载并安装完成</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 电脑世界. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

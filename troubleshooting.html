@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>故障排除 - Computer World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">💻</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="tutorial.html?type=desktop" class="nav-link">台式电脑安装</a></li>
+                <li class="nav-item"><a href="tutorial.html?type=laptop" class="nav-link">笔记本电脑</a></li>
+                <li class="nav-item"><a href="system-install.html" class="nav-link">系统安装/重装</a></li>
+                <li class="nav-item"><a href="troubleshooting.html" class="nav-link">故障排除</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">关于我们</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <!-- 教程标题 -->
+    <div class="tutorial-container">
+        <header class="tutorial-header">
+            <h1 class="tutorial-title">故障排除</h1>
+            <p class="tutorial-subtitle">学习如何解决电脑常见故障，包括系统故障和物理故障。</p>
+        </header>
+
+        <!-- 故障排除模块 -->
+        <div class="troubleshooting-modules">
+            <!-- 模块1：Windows系统故障 -->
+            <div class="troubleshooting-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">1</div>
+                    <h2 class="module-title">Windows系统故障</h2>
+                </div>
+                <div class="module-content">
+                    <div class="trouble-list">
+                        <div class="trouble-item" onclick="toggleSolution('win-boot')">
+                            <div class="trouble-title">
+                                <span>Windows无法正常启动</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="win-boot">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>尝试重启电脑，有时候简单的重启可以解决问题</li>
+                                    <li>进入安全模式，检查最近安装的软件或驱动</li>
+                                    <li>使用系统还原功能，恢复到之前正常的状态</li>
+                                    <li>使用启动修复工具，修复启动文件</li>
+                                    <li>如果以上方法都不行，可能需要重装系统</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('win-blue')">
+                            <div class="trouble-title">
+                                <span>蓝屏错误（Blue Screen）</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="win-blue">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>记录蓝屏错误代码，以便查找具体原因</li>
+                                    <li>检查最近安装的硬件或驱动程序</li>
+                                    <li>运行内存诊断工具，检查内存是否有问题</li>
+                                    <li>检查硬盘健康状态，使用CHKDSK命令</li>
+                                    <li>更新所有驱动程序和Windows更新</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('win-slow')">
+                            <div class="trouble-title">
+                                <span>系统运行缓慢</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="win-slow">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>关闭不必要的启动程序</li>
+                                    <li>清理磁盘空间，删除临时文件</li>
+                                    <li>运行磁盘碎片整理（机械硬盘）</li>
+                                    <li>升级内存或更换SSD</li>
+                                    <li>扫描病毒和恶意软件</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('win-update')">
+                            <div class="trouble-title">
+                                <span>Windows更新失败</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="win-update">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>检查网络连接是否正常</li>
+                                    <li>运行Windows更新疑难解答</li>
+                                    <li>清理Windows更新缓存</li>
+                                    <li>手动下载并安装更新包</li>
+                                    <li>检查系统文件完整性，使用SFC命令</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('win-safe-mode')">
+                            <div class="trouble-title">
+                                <span>如何进入安全模式</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="win-safe-mode">
+                                <h4>解决方法：</h4>
+                                <h5>1. 可以进入系统时：</h5>
+                                <p>方法1：通过设置进入</p>
+                                <ol>
+                                    <li>点击开始菜单，选择"设置"</li>
+                                    <li>点击"更新和安全"</li>
+                                    <li>点击"恢复"</li>
+                                    <li>在"高级启动"下，点击"立即重新启动"</li>
+                                    <li>电脑重启后，选择"疑难解答" > "高级选项" > "启动设置" > "重新启动"</li>
+                                    <li>重启后，按F4或4进入安全模式，按F5或5进入带网络连接的安全模式</li>
+                                </ol>
+                                <p>方法2：按住Shift键点击重启</p>
+                                <ol>
+                                    <li>点击开始菜单，点击电源按钮</li>
+                                    <li>按住键盘上的Shift键不松开</li>
+                                    <li>在按住Shift键的同时，点击"重启"选项</li>
+                                    <li>保持按住Shift键，直到出现高级启动界面</li>
+                                    <li>电脑重启后，选择"疑难解答" > "高级选项" > "启动设置" > "重新启动"</li>
+                                    <li>重启后，按F4或4进入安全模式，按F5或5进入带网络连接的安全模式</li>
+                                </ol>
+                                <h5>2. 无法进入系统时：</h5>
+                                <ol>
+                                    <li>连续重启电脑3次，触发自动修复模式</li>
+                                    <li>在自动修复界面，点击"高级选项"</li>
+                                    <li>选择"疑难解答" > "高级选项" > "启动设置" > "重新启动"</li>
+                                    <li>重启后，按F4或4进入安全模式，按F5或5进入带网络连接的安全模式</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('win-cmd')">
+                            <div class="trouble-title">
+                                <span>如何进入命令提示符（CMD）</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="win-cmd">
+                                <h4>解决方法：</h4>
+                                <h5>1. 正常进入系统时：</h5>
+                                <ol>
+                                    <li>方法1：按下Win + R键，输入"cmd"，按Enter键</li>
+                                    <li>方法2：点击开始菜单，搜索"命令提示符"，点击打开</li>
+                                    <li>方法3：右键点击开始菜单，选择"Windows PowerShell"或"命令提示符"</li>
+                                </ol>
+                                <h5>2. 以管理员身份运行：</h5>
+                                <ol>
+                                    <li>点击开始菜单，搜索"命令提示符"</li>
+                                    <li>右键点击"命令提示符"，选择"以管理员身份运行"</li>
+                                </ol>
+                                <h5>3. 无法进入系统时：</h5>
+                                <ol>
+                                    <li>进入安全模式或自动修复模式</li>
+                                    <li>选择"疑难解答" > "高级选项" > "命令提示符"</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('win-black-screen')">
+                            <div class="trouble-title">
+                                <span>进入系统后只显示黑屏和鼠标，不显示图标和界面</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="win-black-screen">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>按下Ctrl + Alt + Delete键，打开任务管理器</li>
+                                    <li>点击"文件" > "运行新任务"</li>
+                                    <li>输入"explorer.exe"，勾选"以管理员身份创建此任务"，点击"确定"</li>
+                                    <li>如果上述方法不行，尝试：</li>
+                                    <li>在任务管理器中，点击"文件" > "运行新任务"</li>
+                                    <li>输入"control panel"，打开控制面板</li>
+                                    <li>点击"外观和个性化" > "个性化" > "主题"</li>
+                                    <li>点击"桌面图标设置"，勾选需要显示的图标，点击"确定"</li>
+                                    <li>如果问题仍然存在，可能是显卡驱动问题，进入安全模式更新显卡驱动</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块2：台式电脑物理故障 -->
+            <div class="troubleshooting-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">2</div>
+                    <h2 class="module-title">台式电脑物理故障</h2>
+                </div>
+                <div class="module-content">
+                    <div class="trouble-list">
+                        <div class="trouble-item" onclick="toggleSolution('desktop-no-power')">
+                            <div class="trouble-title">
+                                <span>电脑无法开机，无任何反应</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="desktop-no-power">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>检查电源插座是否通电</li>
+                                    <li>检查电源线是否损坏</li>
+                                    <li>检查电源开关是否正常</li>
+                                    <li>尝试更换电源供应器</li>
+                                    <li>检查主板是否有短路现象</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('desktop-beep')">
+                            <div class="trouble-title">
+                                <span>开机时发出蜂鸣声</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="desktop-beep">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>根据蜂鸣声的次数和节奏查找对应的故障代码</li>
+                                    <li>检查内存是否插紧，尝试重新插拔</li>
+                                    <li>检查显卡是否插紧，尝试重新插拔</li>
+                                    <li>检查CPU是否安装正确</li>
+                                    <li>清除CMOS设置，恢复默认BIOS设置</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('desktop-no-display')">
+                            <div class="trouble-title">
+                                <span>电脑开机有声音但无显示</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="desktop-no-display">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>检查显示器是否通电，电源指示灯是否亮</li>
+                                    <li>检查显示器连接线是否插紧</li>
+                                    <li>尝试更换显示器或连接线</li>
+                                    <li>检查显卡是否正常工作</li>
+                                    <li>检查内存是否有问题</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('desktop-overheat')">
+                            <div class="trouble-title">
+                                <span>电脑过热自动关机</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="desktop-overheat">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>检查CPU散热器是否正常工作</li>
+                                    <li>清理电脑内部灰尘，特别是散热器和风扇</li>
+                                    <li>检查机箱通风是否良好</li>
+                                    <li>更换导热硅脂</li>
+                                    <li>考虑安装额外的风扇或更换更高效的散热器</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块3：笔记本电脑物理故障 -->
+            <div class="troubleshooting-module scroll-animation" id="laptop-troubleshooting">
+                <div class="module-header">
+                    <div class="module-number">3</div>
+                    <h2 class="module-title">笔记本电脑物理故障</h2>
+                </div>
+                <div class="module-content">
+                    <div class="trouble-list">
+                        <div class="trouble-item" onclick="toggleSolution('laptop-battery')">
+                            <div class="trouble-title">
+                                <span>电池续航时间短</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="laptop-battery">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>降低屏幕亮度</li>
+                                    <li>关闭不必要的后台程序</li>
+                                    <li>禁用不必要的设备，如蓝牙、WiFi等</li>
+                                    <li>更新电池驱动程序</li>
+                                    <li>如果电池已经老化，考虑更换新电池</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('laptop-keyboard')">
+                            <div class="trouble-title">
+                                <span>键盘部分按键失灵</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="laptop-keyboard">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>清理键盘缝隙中的灰尘和杂物</li>
+                                    <li>重启电脑，检查是否是软件问题</li>
+                                    <li>尝试使用外接键盘，确认是否是键盘硬件问题</li>
+                                    <li>如果是硬件问题，考虑更换键盘</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('laptop-screen')">
+                            <div class="trouble-title">
+                                <span>屏幕闪烁或花屏</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="laptop-screen">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>检查显卡驱动是否需要更新</li>
+                                    <li>重启电脑，检查是否是临时问题</li>
+                                    <li>检查屏幕连接线是否松动</li>
+                                    <li>如果是硬件问题，考虑更换屏幕或显卡</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('laptop-charge')">
+                            <div class="trouble-title">
+                                <span>无法充电或充电缓慢</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="laptop-charge">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>检查充电器是否正常工作</li>
+                                    <li>检查充电接口是否有损坏或松动</li>
+                                    <li>清理充电接口中的灰尘</li>
+                                    <li>更新电池驱动程序</li>
+                                    <li>如果是电池问题，考虑更换新电池</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块4：Linux系统故障 -->
+            <div class="troubleshooting-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">4</div>
+                    <h2 class="module-title">Linux系统故障</h2>
+                </div>
+                <div class="module-content">
+                    <div class="trouble-list">
+                        <div class="trouble-item" onclick="toggleSolution('linux-boot')">
+                            <div class="trouble-title">
+                                <span>Linux无法正常启动</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="linux-boot">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>进入单用户模式，检查系统文件</li>
+                                    <li>使用救援模式修复系统</li>
+                                    <li>检查GRUB引导配置</li>
+                                    <li>修复文件系统，使用fsck命令</li>
+                                    <li>检查最近安装的软件或更新</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('linux-network')">
+                            <div class="trouble-title">
+                                <span>网络连接问题</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="linux-network">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>检查网络线缆是否插紧</li>
+                                    <li>使用ifconfig或ip命令检查网络接口状态</li>
+                                    <li>检查网络配置文件</li>
+                                    <li>重启网络服务，使用systemctl restart network</li>
+                                    <li>检查防火墙设置</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('linux-package')">
+                            <div class="trouble-title">
+                                <span>软件包管理问题</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="linux-package">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>清理软件包缓存，使用apt clean或yum clean</li>
+                                    <li>修复损坏的软件包，使用apt --fix-broken install或yum check-update</li>
+                                    <li>更新软件包列表，使用apt update或yum update</li>
+                                    <li>检查软件源配置是否正确</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('linux-graphic')">
+                            <div class="trouble-title">
+                                <span>图形界面问题</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="linux-graphic">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>进入命令行模式，检查显卡驱动</li>
+                                    <li>重新安装显卡驱动</li>
+                                    <li>检查Xorg配置文件</li>
+                                    <li>尝试使用不同的桌面环境</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块5：Mac系统故障 -->
+            <div class="troubleshooting-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">5</div>
+                    <h2 class="module-title">Mac系统故障</h2>
+                </div>
+                <div class="module-content">
+                    <div class="trouble-list">
+                        <div class="trouble-item" onclick="toggleSolution('mac-boot')">
+                            <div class="trouble-title">
+                                <span>Mac无法正常启动</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="mac-boot">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>尝试强制重启，按住电源键10秒</li>
+                                    <li>进入恢复模式，使用磁盘工具修复磁盘</li>
+                                    <li>重置NVRAM/PRAM</li>
+                                    <li>重置SMC（系统管理控制器）</li>
+                                    <li>使用Time Machine恢复系统</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('mac-app')">
+                            <div class="trouble-title">
+                                <span>应用程序崩溃或无响应</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="mac-app">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>强制退出应用程序，使用Command+Option+Esc</li>
+                                    <li>重启应用程序</li>
+                                    <li>更新应用程序到最新版本</li>
+                                    <li>检查应用程序兼容性</li>
+                                    <li>重新安装应用程序</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('mac-battery')">
+                            <div class="trouble-title">
+                                <span>电池问题</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="mac-battery">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>检查电池健康状态，使用系统报告</li>
+                                    <li>校准电池</li>
+                                    <li>降低屏幕亮度</li>
+                                    <li>关闭不必要的后台程序</li>
+                                    <li>如果电池老化，考虑更换新电池</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="trouble-item" onclick="toggleSolution('mac-update')">
+                            <div class="trouble-title">
+                                <span>系统更新失败</span>
+                                <span class="trouble-toggle">▼</span>
+                            </div>
+                            <div class="trouble-solution" id="mac-update">
+                                <h4>解决方法：</h4>
+                                <ol>
+                                    <li>检查网络连接是否正常</li>
+                                    <li>确保有足够的磁盘空间</li>
+                                    <li>重启Mac，再次尝试更新</li>
+                                    <li>使用恢复模式安装更新</li>
+                                    <li>下载完整的安装包进行更新</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            const toggle = solution.previousElementSibling.querySelector('.trouble-toggle');
+            
+            if (solution.style.display === 'block') {
+                solution.style.display = 'none';
+                toggle.textContent = '▼';
+            } else {
+                solution.style.display = 'block';
+                toggle.textContent = '▲';
+            }
+        }
+    </script>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 电脑世界. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

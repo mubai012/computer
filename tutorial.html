@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台式电脑安装教程 - Computer World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">💻</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="tutorial.html?type=desktop" class="nav-link">台式电脑安装</a></li>
+                <li class="nav-item"><a href="tutorial.html?type=laptop" class="nav-link">笔记本电脑</a></li>
+                <li class="nav-item"><a href="system-install.html" class="nav-link">系统安装/重装</a></li>
+                <li class="nav-item"><a href="troubleshooting.html" class="nav-link">故障排除</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">关于我们</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <!-- 教程选择界面 -->
+    <div class="tutorial-container" id="tutorial-select">
+        <header class="tutorial-header">
+            <h1 class="tutorial-title">选择学习内容</h1>
+            <p class="tutorial-subtitle">请选择您想要学习的电脑类型，我们将为您提供详细的教程。</p>
+        </header>
+
+        <div class="computer-type-selector">
+            <div class="computer-type" onclick="showTutorial('desktop')">
+                <div class="computer-type-icon">🖥️</div>
+                <h2 class="computer-type-title">台式电脑</h2>
+                <p class="computer-type-description">学习台式电脑的组装、升级和维护</p>
+            </div>
+            <div class="computer-type" onclick="showTutorial('laptop')">
+                <div class="computer-type-icon">💻</div>
+                <h2 class="computer-type-title">笔记本电脑</h2>
+                <p class="computer-type-description">学习笔记本电脑的使用、保养和维修</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 台式电脑教程 -->
+    <div class="tutorial-container" id="desktop-tutorial" style="display: none;">
+        <header class="tutorial-header">
+            <h1 class="tutorial-title">台式电脑安装教程</h1>
+            <p class="tutorial-subtitle">按照以下步骤，轻松组装您的台式电脑。每个步骤都配有详细的图片说明，确保您能顺利完成安装。</p>
+        </header>
+
+        <div class="tutorial-steps">
+            <!-- 步骤1: 准备工作 -->
+            <div class="step scroll-animation">
+                <div class="step-content">
+                    <div class="step-number">1</div>
+                    <h2 class="step-title">准备工作</h2>
+                    <p class="step-description">在开始组装电脑之前，确保您已经准备好所有必要的组件和工具。这包括：</p>
+                    <ul class="step-list">
+                        <li>主板</li>
+                        <li>CPU（中央处理器）</li>
+                        <li>CPU散热器</li>
+                        <li>内存条</li>
+                        <li>硬盘（SSD或HDD）</li>
+                        <li>显卡（如果CPU没有集成显卡）</li>
+                        <li>电源供应器（PSU）</li>
+                        <li>机箱</li>
+                        <li>螺丝刀套装</li>
+                        <li>防静电手腕带（可选但推荐）</li>
+                    </ul>
+                </div>
+                <div class="step-image">
+                    <img src="https://ts1.tc.mm.bing.net/th/id/R-C.65e86d4c374d7ab2a1273c652ef7c5c1?rik=6kQKGYzYPJl52A&riu=http%3a%2f%2fwww.bjzfkt.com%2fUploadFiles%2fOthers%2f201804101624154730165.jpg&ehk=%2f4VRGGYcgV2SXb5FkqlJyoKVA4%2f3tnleSMthb%2fRNJH0%3d&risl=&pid=ImgRaw&r=0" alt="电脑组装准备工作">
+                </div>
+            </div>
+
+            <!-- 步骤2: 安装CPU -->
+            <div class="step scroll-animation">
+                <div class="step-content">
+                    <div class="step-number">2</div>
+                    <h2 class="step-title">安装CPU</h2>
+                    <p class="step-description">CPU是电脑的大脑，正确安装非常重要：</p>
+                    <ol class="step-list">
+                        <li>打开主板上的CPU插槽锁扣</li>
+                        <li>根据CPU上的三角标记和主板插槽上的标记对齐</li>
+                        <li>轻轻将CPU放入插槽，确保完全贴合</li>
+                        <li>关闭锁扣，固定CPU</li>
+                    </ol>
+                    <div class="step-video">
+                        <a href="https://www.bilibili.com/video/BV1Eu4y1f7Pn/" class="btn btn-primary" target="_blank">查看CPU安装视频教程</a>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="https://ts1.tc.mm.bing.net/th/id/OIP-C.tveQReiwAutfv4ShExkf-AHaET?rs=1&pid=ImgDetMain&o=7&rm=3" alt="安装CPU">
+                </div>
+            </div>
+
+            <!-- 步骤3: 安装CPU散热器 -->
+            <div class="step scroll-animation">
+                <div class="step-content">
+                    <div class="step-number">3</div>
+                    <h2 class="step-title">安装CPU散热器</h2>
+                    <p class="step-description">散热器可以防止CPU过热，确保稳定运行：</p>
+                    <ol class="step-list">
+                        <li>在CPU表面涂抹适量的导热硅脂</li>
+                        <li>将散热器对准CPU和主板上的安装孔</li>
+                        <li>使用螺丝或卡扣固定散热器</li>
+                        <li>连接散热器风扇的电源线缆到主板上的CPU_FAN接口</li>
+                    </ol>
+                    <div class="step-video">
+                        <a href="https://v.qq.com/x/page/j0644goxrm7.html?ptag=bing.com" class="btn btn-primary" target="_blank">查看CPU散热器安装视频教程</a>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="https://qna.smzdm.com/202303/02/6400a7d4df0056161.jpg_e1080.jpg" alt="安装CPU散热器">
+                </div>
+            </div>
+
+            <!-- 步骤4: 安装内存条 -->
+            <div class="step scroll-animation">
+                <div class="step-content">
+                    <div class="step-number">4</div>
+                    <h2 class="step-title">安装内存条</h2>
+                    <p class="step-description">内存是电脑的临时存储区域，影响系统运行速度：</p>
+                    <ol class="step-list">
+                        <li>找到主板上的内存插槽</li>
+                        <li>打开插槽两侧的卡扣</li>
+                        <li>根据内存模块上的缺口和插槽上的凸起对齐</li>
+                        <li>将内存模块垂直插入插槽，直到两侧卡扣自动闭合</li>
+                        <li>如果安装多条内存，参考主板手册选择正确的插槽组合</li>
+                    </ol>
+                    <div class="step-video">
+                        <a href="https://www.bilibili.com/video/BV16M4y1N7TQ/" class="btn btn-primary" target="_blank">查看内存条安装视频教程</a>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00635-1216.jpg" alt="安装内存条">
+                </div>
+            </div>
+
+            <!-- 步骤5: 安装主板到机箱 -->
+            <div class="step scroll-animation">
+                <div class="step-content">
+                    <div class="step-number">5</div>
+                    <h2 class="step-title">安装主板到机箱</h2>
+                    <p class="step-description">将组装好的主板安装到机箱中：</p>
+                    <ol class="step-list">
+                        <li>在机箱中安装主板铜柱，确保与主板上的螺丝孔对齐</li>
+                        <li>将主板放入机箱，对准铜柱和I/O挡板</li>
+                        <li>使用螺丝固定主板到铜柱上</li>
+                        <li>确保主板与机箱金属部分没有接触，避免短路</li>
+                    </ol>
+                    <div class="step-video">
+                        <a href="https://www.bilibili.com/video/BV1if4y1Z7JY/" class="btn btn-primary" target="_blank">查看主板安装视频教程</a>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="https://i-blog.csdnimg.cn/blog_migrate/b03bd856b90375232997496087a97c5c.png" alt="安装主板到机箱">
+                </div>
+            </div>
+
+            <!-- 步骤6: 安装硬盘 -->
+            <div class="step scroll-animation">
+                <div class="step-content">
+                    <div class="step-number">6</div>
+                    <h2 class="step-title">安装硬盘</h2>
+                    <p class="step-description">硬盘用于长期存储数据，包括操作系统和文件。常见的硬盘类型有：</p>
+                    <ul class="step-list">
+                        <li>SSD（固态硬盘）：速度快、噪音低、功耗小，但价格较高</li>
+                        <li>HDD（机械硬盘）：容量大、价格低，但速度较慢、有机械噪音</li>
+                        <li>SSHD（混合硬盘）：结合了SSD和HDD的优点，提供平衡的性能和容量</li>
+                    </ul>
+                    <p class="step-description">安装步骤：</p>
+                    <ol class="step-list">
+                        <li>找到机箱中的硬盘位</li>
+                        <li>对于SSD，使用螺丝或免工具支架固定到机箱</li>
+                        <li>对于HDD，将其放入3.5英寸硬盘位并固定</li>
+                        <li>使用SATA线缆连接硬盘到主板的SATA接口</li>
+                        <li>连接电源线缆到硬盘</li>
+                    </ol>
+                    <div class="step-video">
+                        <h3>硬盘安装视频教程：</h3>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+                            <a href="https://tv.sohu.com/v/dXMvMzM1OTQyMzI5LzExNTA3Mzk0NS5zaHRtbA==.html" class="btn btn-primary" target="_blank">机械硬盘安装</a>
+                            <a href="https://www.bilibili.com/video/BV1NEYTzFE1j/" class="btn btn-primary" target="_blank">固态硬盘安装</a>
+                            <a href="https://www.bilibili.com/video/av664872748/" class="btn btn-primary" target="_blank">M.2硬盘安装</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="https://ts3.tc.mm.bing.net/th/id/OIP-C.IbJpDCrl54gsgVBDmGMtHQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="安装硬盘">
+                </div>
+            </div>
+
+            <!-- 步骤7: 安装显卡 -->
+            <div class="step scroll-animation">
+                <div class="step-content">
+                    <div class="step-number">7</div>
+                    <h2 class="step-title">安装显卡</h2>
+                    <p class="step-description">如果您的CPU没有集成显卡，或者需要更好的图形性能，需要安装独立显卡：</p>
+                    <ol class="step-list">
+                        <li>找到主板上的PCIe x16插槽</li>
+                        <li>移除机箱背面对应的扩展槽挡板</li>
+                        <li>将显卡金手指对准PCIe插槽，垂直插入</li>
+                        <li>使用螺丝固定显卡到机箱</li>
+                        <li>连接电源线缆到显卡（如果需要）</li>
+                    </ol>
+                    <p class="step-note">注意：显卡需要与主板兼容，确保主板的PCIe插槽版本与显卡匹配，同时考虑机箱的尺寸是否能容纳显卡。</p>
+                    <div class="step-video">
+                        <a href="https://www.bilibili.com/video/BV18N4y1A7Xg/" class="btn btn-primary" target="_blank">查看显卡安装视频教程</a>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="https://www.dians.net/upload/default/20240409/569342657fd49c3006be46cbaaf7bd3d.jpg" alt="安装显卡">
+                </div>
+            </div>
+
+            <!-- 步骤8: 安装电源 -->
+            <div class="step scroll-animation">
+                <div class="step-content">
+                    <div class="step-number">8</div>
+                    <h2 class="step-title">安装电源</h2>
+                    <p class="step-description">电源为所有组件提供电力，选择合适功率的电源很重要：</p>
+                    <ol class="step-list">
+                        <li>将电源放入机箱的电源位，确保风扇朝向正确（通常向下或向后）</li>
+                        <li>使用螺丝固定电源到机箱</li>
+                        <li>连接24针主电源线缆到主板</li>
+                        <li>连接4/8针CPU电源线缆到主板</li>
+                        <li>连接SATA电源线缆到硬盘和光驱</li>
+                        <li>连接PCIe电源线缆到显卡（如果需要）</li>
+                    </ol>
+                    <div class="step-video">
+                        <a href="https://www.bilibili.com/video/BV1jgSvYoEYp/" class="btn btn-primary" target="_blank">查看电源安装视频教程</a>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="https://www.qkidc.cn/plugins/addons/wxinseo/template/picture/34808f397cd5224b0261a6c0ed9f6d23.jpg" alt="安装电源">
+                </div>
+            </div>
+
+            <!-- 步骤9: 连接机箱线缆 -->
+            <div class="step scroll-animation">
+                <div class="step-content">
+                    <div class="step-number">9</div>
+                    <h2 class="step-title">连接机箱线缆</h2>
+                    <p class="step-description">连接机箱上的各种线缆到主板：</p>
+                    <ol class="step-list">
+                        <li>连接电源开关（POWER SW）线缆</li>
+                        <li>连接重启开关（RESET SW）线缆</li>
+                        <li>连接电源指示灯（POWER LED）线缆</li>
+                        <li>连接硬盘指示灯（HDD LED）线缆</li>
+                        <li>连接前置USB线缆</li>
+                        <li>连接前置音频线缆</li>
+                    </ol>
+                    <p class="step-note">注意：线缆连接需要参考主板手册，确保连接到正确的接口。</p>
+                    <div class="step-video">
+                        <a href="https://www.bilibili.com/video/BV1Bt4y117Ec/" class="btn btn-primary" target="_blank">查看机箱线缆连接视频教程</a>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="https://i-blog.csdnimg.cn/blog_migrate/635d608a47c64e6bfa5985813d1c1d8f.jpeg" alt="连接机箱线缆">
+                </div>
+            </div>
+
+            <!-- 步骤10: 完成组装 -->
+            <div class="step scroll-animation">
+                <div class="step-content">
+                    <div class="step-number">10</div>
+                    <h2 class="step-title">完成组装</h2>
+                    <p class="step-description">现在您已经完成了所有组件的安装，接下来需要：</p>
+                    <ol class="step-list">
+                        <li>仔细检查所有连接，确保没有遗漏或松动</li>
+                        <li>整理线缆，确保良好的 airflow</li>
+                        <li>盖上机箱侧板并固定</li>
+                        <li>连接显示器、键盘、鼠标和电源线</li>
+                        <li>打开电源，启动电脑</li>
+                        <li>安装操作系统和驱动程序</li>
+                    </ol>
+                    <p class="step-success">恭喜！您已经成功组装了自己的台式电脑。</p>
+                </div>
+                <div class="step-image">
+                    <img src="https://img.alicdn.com/i3/2204197008761/O1CN01ErW2TZ2Eaal4rM93N_!!2204197008761.jpg" alt="完成电脑组装">
+                </div>
+            </div>
+        </div>
+        
+        <!-- 电脑注意事项 -->
+        <div class="tutorial-notes">
+            <h2 class="notes-title">电脑组装与使用注意事项</h2>
+            <div class="notes-content">
+                <div class="note-item">
+                    <h3 class="note-title">⚠️ 禁止热插拔设备</h3>
+                    <p class="note-description">热插拔是指在电脑开机状态下插拔硬件设备，这可能导致严重后果：</p>
+                    <ul class="note-consequences">
+                        <li>损坏硬件设备，如硬盘、显卡、内存等</li>
+                        <li>导致数据丢失或硬盘损坏</li>
+                        <li>引发主板短路，烧毁整个主板</li>
+                        <li>造成系统崩溃，需要重新安装操作系统</li>
+                    </ul>
+                </div>
+                
+                <div class="note-item">
+                    <h3 class="note-title">⚠️ 注意静电防护</h3>
+                    <p class="note-description">静电可能损坏敏感的电子元件：</p>
+                    <ul class="note-consequences">
+                        <li>使用防静电手腕带或触摸金属物体释放静电</li>
+                        <li>避免在地毯或干燥环境中组装电脑</li>
+                        <li>不要直接触摸主板、CPU等敏感元件的引脚</li>
+                    </ul>
+                </div>
+                
+                <div class="note-item">
+                    <h3 class="note-title">⚠️ 正确连接线缆</h3>
+                    <p class="note-description">错误的线缆连接可能导致设备损坏：</p>
+                    <ul class="note-consequences">
+                        <li>电源线缆接反可能烧毁设备</li>
+                        <li>数据线连接松动可能导致设备无法识别</li>
+                        <li>跳线连接错误可能导致电脑无法启动</li>
+                    </ul>
+                </div>
+                
+                <div class="note-item">
+                    <h3 class="note-title">⚠️ 注意散热</h3>
+                    <p class="note-description">良好的散热是电脑稳定运行的关键：</p>
+                    <ul class="note-consequences">
+                        <li>确保CPU散热器正确安装并涂抹导热硅脂</li>
+                        <li>不要阻塞机箱通风口</li>
+                        <li>定期清理灰尘，避免散热片和风扇积灰</li>
+                        <li>高温可能导致电脑自动关机或硬件损坏</li>
+                    </ul>
+                </div>
+                
+                <div class="note-item">
+                    <h3 class="note-title">⚠️ 电源安全</h3>
+                    <p class="note-description">电源是电脑的心脏，需要特别注意：</p>
+                    <ul class="note-consequences">
+                        <li>选择功率足够的电源，避免过载</li>
+                        <li>确保电源接地良好，避免触电风险</li>
+                        <li>不要使用损坏的电源线或适配器</li>
+                        <li>长时间不使用电脑时，拔掉电源线</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 笔记本电脑教程 -->
+    <div class="tutorial-container" id="laptop-tutorial" style="display: none;">
+        <header class="tutorial-header">
+            <h1 class="tutorial-title">笔记本电脑教程</h1>
+            <p class="tutorial-subtitle">学习笔记本电脑的使用、保养和维修技巧。</p>
+        </header>
+
+        <div class="laptop-content">
+            <div class="laptop-section">
+                <h2>笔记本电脑基础知识</h2>
+                <p>笔记本电脑是一种便携式计算机，具有体积小、重量轻、便于携带等特点。它集成了显示器、键盘、触摸板和电池等组件，适合在各种场合使用。</p>
+            </div>
+            <div class="laptop-section">
+                <h2>笔记本电脑保养</h2>
+                <ul>
+                    <li>保持笔记本电脑清洁，定期清理键盘和屏幕</li>
+                    <li>避免在高温、潮湿或灰尘较多的环境中使用</li>
+                    <li>使用合适的笔记本电脑包，避免碰撞和挤压</li>
+                    <li>定期更新操作系统和驱动程序</li>
+                    <li>合理使用电池，避免过度充电和放电</li>
+                </ul>
+            </div>
+            <div class="laptop-section">
+                <h2>常见问题解决</h2>
+                <ul>
+                    <li>笔记本电脑无法开机</li>
+                    <li>电池续航时间短</li>
+                    <li>电脑运行速度慢</li>
+                    <li>过热问题</li>
+                    <li>屏幕故障</li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <a href="troubleshooting.html#laptop-troubleshooting" class="btn btn-primary">查看详细故障排除教程</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTutorial(type) {
+            // 隐藏所有教程
+            document.getElementById('tutorial-select').style.display = 'none';
+            document.getElementById('desktop-tutorial').style.display = 'none';
+            document.getElementById('laptop-tutorial').style.display = 'none';
+            
+            // 显示选择的教程
+            if (type === 'desktop') {
+                document.getElementById('desktop-tutorial').style.display = 'block';
+            } else if (type === 'laptop') {
+                document.getElementById('laptop-tutorial').style.display = 'block';
+            }
+        }
+        
+        // 页面加载时检查URL参数 - 使用立即执行函数确保优先执行
+        (function() {
+            // 获取URL参数
+            const urlParams = new URLSearchParams(window.location.search);
+            const tutorialType = urlParams.get('type');
+            
+            // 如果有type参数，直接显示对应的教程
+            if (tutorialType === 'desktop' || tutorialType === 'laptop') {
+                // 确保DOM加载完成后执行
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', function() {
+                        showTutorial(tutorialType);
+                    });
+                } else {
+                    showTutorial(tutorialType);
+                }
+            }
+        })();
+    </script>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 电脑世界. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
