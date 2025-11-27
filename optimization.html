@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电脑优化 - Computer World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">💻</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="tutorial.html?type=desktop" class="nav-link">台式电脑安装</a></li>
+                <li class="nav-item"><a href="tutorial.html?type=laptop" class="nav-link">笔记本电脑</a></li>
+                <li class="nav-item"><a href="system-install.html" class="nav-link">系统安装/重装</a></li>
+                <li class="nav-item"><a href="optimization.html" class="nav-link">优化</a></li>
+                <li class="nav-item"><a href="troubleshooting.html" class="nav-link">故障排除</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">关于我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 优化页面 -->
+    <div class="tutorial-container">
+        <header class="tutorial-header">
+            <h1 class="tutorial-title">电脑优化</h1>
+            <p class="tutorial-subtitle">学习电脑清洁和系统优化方法，让您的电脑保持最佳状态</p>
+        </header>
+
+        <!-- 优化模块 -->
+        <div class="optimization-modules">
+            <!-- 模块1：笔记本电脑清理方法 -->
+            <div class="optimization-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">1</div>
+                    <h2 class="module-title">笔记本电脑清理方法</h2>
+                </div>
+                <div class="module-content">
+                    <div class="cleaning-section">
+                        <h3>外部清洁</h3>
+                        <ul>
+                            <li>使用柔软的微纤维布清洁屏幕，避免使用酒精或其他化学清洁剂</li>
+                            <li>使用压缩空气清理键盘缝隙中的灰尘和杂物</li>
+                            <li>使用微纤维布蘸少量清水清洁机身表面</li>
+                            <li>定期清理触控板，保持其灵敏度</li>
+                        </ul>
+                    </div>
+                    <div class="cleaning-section">
+                        <h3>内部清洁</h3>
+                        <ul>
+                            <li>关闭电源并拔下充电器，取出电池（如果可拆卸）</li>
+                            <li>使用螺丝刀打开笔记本电脑后盖</li>
+                            <li>使用压缩空气清理风扇和散热片上的灰尘</li>
+                            <li>使用软毛刷清理主板和其他组件上的灰尘</li>
+                            <li>重新组装笔记本电脑，确保所有螺丝都拧紧</li>
+                        </ul>
+                        <p class="note">注意：内部清洁建议由专业人士操作，避免损坏硬件</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块2：台式电脑清理方法 -->
+            <div class="optimization-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">2</div>
+                    <h2 class="module-title">台式电脑清理方法</h2>
+                </div>
+                <div class="module-content">
+                    <div class="cleaning-section">
+                        <h3>外部清洁</h3>
+                        <ul>
+                            <li>使用微纤维布清洁显示器屏幕</li>
+                            <li>使用压缩空气清理键盘和鼠标缝隙中的灰尘</li>
+                            <li>使用微纤维布清洁机箱表面</li>
+                        </ul>
+                    </div>
+                    <div class="cleaning-section">
+                        <h3>内部清洁</h3>
+                        <ul>
+                            <li>关闭电源并拔下所有线缆</li>
+                            <li>打开机箱侧板</li>
+                            <li>使用压缩空气清理机箱内部的灰尘，特别是风扇和散热片</li>
+                            <li>使用软毛刷清理主板和其他组件</li>
+                            <li>清理完毕后，重新安装机箱侧板</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块3：Windows系统优化方法 -->
+            <div class="optimization-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">3</div>
+                    <h2 class="module-title">Windows系统优化方法</h2>
+                </div>
+                <div class="module-content">
+                    <div class="optimization-section">
+                        <h3>启动项优化</h3>
+                        <ul>
+                            <li>按下Ctrl + Shift + Esc打开任务管理器</li>
+                            <li>点击"启动"选项卡</li>
+                            <li>禁用不必要的启动项，减少开机时间</li>
+                        </ul>
+                    </div>
+                    <div class="optimization-section">
+                        <h3>磁盘清理</h3>
+                        <ul>
+                            <li>打开"此电脑"，右键点击系统盘，选择"属性"</li>
+                            <li>点击"磁盘清理"按钮</li>
+                            <li>选择要清理的文件类型，点击"确定"</li>
+                            <li>点击"清理系统文件"，进一步清理系统文件</li>
+                        </ul>
+                    </div>
+                    <div class="optimization-section">
+                        <h3>系统更新</h3>
+                        <ul>
+                            <li>打开"设置" > "更新和安全" > "Windows Update"</li>
+                            <li>点击"检查更新"，安装最新的系统更新</li>
+                            <li>更新完成后重启电脑</li>
+                        </ul>
+                    </div>
+                    <div class="optimization-section">
+                        <h3>病毒扫描</h3>
+                        <ul>
+                            <li>使用Windows Defender或第三方杀毒软件进行全面扫描</li>
+                            <li>定期更新病毒库</li>
+                            <li>启用实时保护功能</li>
+                        </ul>
+                    </div>
+                    <div class="optimization-section">
+                        <h3>内存优化</h3>
+                        <ul>
+                            <li>点击设置-系统-存储-临时文件，可以都删除</li>
+                            <li>点击设置-系统-存储-存储感知，打开存储感知并配置如下：<br>• 勾选"通过自动清理临时系统和应用文件来保持Windows顺畅运行"<br>• 开启"自动用户内容清除"<br>• 配置清理计划为"每天"<br>• 设置回收站文件保留14天<br>• 设置下载文件夹文件保留14天</li>
+                            <li>设置-系统-存储-高级存储设置-保存新的地方，将所有都改为C盘以外的盘符</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块4：Mac系统优化方法 -->
+            <div class="optimization-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">4</div>
+                    <h2 class="module-title">Mac系统优化方法</h2>
+                </div>
+                <div class="module-content">
+                    <div class="optimization-section">
+                        <h3>存储优化</h3>
+                        <ul>
+                            <li>点击苹果菜单 > "关于本机" > "存储" > "管理"</li>
+                            <li>使用"优化存储"功能自动清理文件</li>
+                            <li>手动删除不必要的文件和应用程序</li>
+                        </ul>
+                    </div>
+                    <div class="optimization-section">
+                        <h3>启动项优化</h3>
+                        <ul>
+                            <li>点击苹果菜单 > "系统偏好设置" > "用户与群组"</li>
+                            <li>点击"登录项"，移除不必要的启动项</li>
+                        </ul>
+                    </div>
+                    <div class="optimization-section">
+                        <h3>系统更新</h3>
+                        <ul>
+                            <li>点击苹果菜单 > "系统偏好设置" > "软件更新"</li>
+                            <li>安装最新的macOS更新</li>
+                        </ul>
+                    </div>
+                    <div class="optimization-section">
+                        <h3>活动监视器</h3>
+                        <ul>
+                            <li>打开"启动台" > "其他" > "活动监视器"</li>
+                            <li>查看CPU、内存和磁盘使用情况</li>
+                            <li>强制退出无响应的应用程序</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块5：Linux系统优化方法 -->
+            <div class="optimization-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">5</div>
+                    <h2 class="module-title">Linux系统优化方法</h2>
+                </div>
+                <div class="module-content">
+                    <div class="optimization-section">
+                        <h3>清理软件包缓存</h3>
+                        <ul>
+                            <li>Debian/Ubuntu系统：运行<code>sudo apt clean</code>清理缓存</li>
+                            <li>CentOS/RHEL系统：运行<code>sudo yum clean all</code>清理缓存</li>
+                        </ul>
+                    </div>
+                    <div class="optimization-section">
+                        <h3>禁用不必要的服务</h3>
+                        <ul>
+                            <li>使用<code>systemctl list-unit-files --type=service</code>查看所有服务</li>
+                            <li>使用<code>sudo systemctl disable service-name</code>禁用不必要的服务</li>
+                        </ul>
+                    </div>
+                    <div class="optimization-section">
+                        <h3>更新系统</h3>
+                        <ul>
+                            <li>Debian/Ubuntu系统：运行<code>sudo apt update && sudo apt upgrade</code></li>
+                            <li>CentOS/RHEL系统：运行<code>sudo yum update</code></li>
+                        </ul>
+                    </div>
+                    <div class="optimization-section">
+                        <h3>使用轻量级桌面环境</h3>
+                        <ul>
+                            <li>对于旧电脑，考虑使用Xfce、LXQt等轻量级桌面环境</li>
+                            <li>减少资源占用，提高系统响应速度</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块6：显卡驱动安装教程 -->
+            <div class="optimization-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">6</div>
+                    <h2 class="module-title">显卡驱动安装教程</h2>
+                </div>
+                <div class="module-content">
+                    <p>正确安装显卡驱动对于电脑性能至关重要。以下是N卡和A卡用户的驱动安装方法，以及不同用户群体适合的驱动类型。</p>
+                    
+                    <div class="optimization-section">
+                        <h3>一、如何查询自己的显卡型号</h3>
+                        <p>在安装驱动之前，需要先了解自己的显卡型号：</p>
+                        <ul>
+                            <li>Windows系统：右键点击桌面空白处 → 选择"显示设置" → 滚动到底部点击"高级显示设置" → 查看"显示适配器属性"</li>
+                            <li>或按下Win + R键 → 输入"dxdiag" → 点击"显示"选项卡查看显卡信息</li>
+                            <li>Linux系统：运行<code>lspci | grep -i vga</code>命令查看显卡信息</li>
+                            <li>Mac系统：点击苹果菜单 → "关于本机" → "显示器" → 点击"图形卡"查看</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="optimization-section">
+                        <h3>二、NVIDIA显卡（N卡）驱动安装</h3>
+                        <p>NVIDIA提供了多种驱动版本，适合不同用户群体：</p>
+                        
+                        <h4>1. N卡用户群体与适合的驱动</h4>
+                        <ul>
+                            <li><strong>游戏用户：</strong>推荐安装<strong>NVIDIA Game Ready驱动</strong>
+                                <ul>
+                                    <li>专为游戏优化，提供最新游戏支持和性能提升</li>
+                                    <li>包含DLSS、Reflex等游戏技术支持</li>
+                                    <li>定期更新以支持新发布的游戏</li>
+                                </ul>
+                            </li>
+                            <li><strong>视频创作者：</strong>推荐安装<strong>NVIDIA Studio驱动</strong>
+                                <ul>
+                                    <li>专为创意工作流优化，支持Adobe、DaVinci Resolve等专业软件</li>
+                                    <li>提供稳定的性能和兼容性</li>
+                                    <li>针对视频编辑、3D渲染等任务进行优化</li>
+                                </ul>
+                            </li>
+                            <li><strong>普通用户：</strong>可以选择任意一种驱动，根据主要使用场景决定</li>
+                        </ul>
+                        
+                        <h4>2. N卡驱动安装步骤</h4>
+                        <ol>
+                            <li>访问<a href="https://www.nvidia.cn/geforce/drivers/" target="_blank">NVIDIA官方驱动下载页面</a></li>
+                            <li>选择你的显卡产品类型、系列、型号和操作系统</li>
+                            <li>点击"搜索"，然后点击"下载"按钮获取驱动安装包</li>
+                            <li>下载完成后，双击运行安装程序</li>
+                            <li>选择"自定义（高级）"安装选项</li>
+                            <li>勾选"执行清洁安装"以确保完全卸载旧驱动</li>
+                            <li>按照安装向导完成驱动安装</li>
+                            <li>安装完成后重启电脑</li>
+                        </ol>
+                        
+                        <h4>3. 使用NVIDIA GeForce Experience安装驱动</h4>
+                        <p>对于游戏用户，也可以使用NVIDIA GeForce Experience自动管理驱动：</p>
+                        <ol>
+                            <li>访问<a href="https://www.nvidia.cn/geforce/geforce-experience/" target="_blank">NVIDIA GeForce Experience下载页面</a>并安装</li>
+                            <li>打开GeForce Experience，登录NVIDIA账户</li>
+                            <li>点击"驱动程序"选项卡</li>
+                            <li>点击"下载"按钮获取最新驱动</li>
+                            <li>下载完成后，点击"快速安装"或"自定义安装"</li>
+                            <li>按照提示完成安装并重启电脑</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="optimization-section">
+                        <h3>三、AMD显卡（A卡）驱动安装</h3>
+                        <h4>1. A卡驱动类型</h4>
+                        <ul>
+                            <li><strong>AMD Adrenalin驱动：</strong>适合所有A卡用户，包括游戏玩家和创意工作者</li>
+                            <li>集成了游戏优化、直播功能和创意工具</li>
+                            <li>支持AMD FidelityFX、Radeon Anti-Lag等技术</li>
+                        </ul>
+                        
+                        <h4>2. A卡驱动安装步骤</h4>
+                        <ol>
+                            <li>访问<a href="https://www.amd.com/zh-hans/support" target="_blank">AMD官方支持页面</a></li>
+                            <li>选择你的显卡产品系列和型号</li>
+                            <li>选择操作系统版本</li>
+                            <li>点击"下载"按钮获取驱动安装包</li>
+                            <li>下载完成后，双击运行安装程序</li>
+                            <li>选择"快速安装"或"自定义安装"</li>
+                            <li>按照安装向导完成驱动安装</li>
+                            <li>安装完成后重启电脑</li>
+                        </ol>
+                        
+                        <h4>3. 使用AMD Software: Adrenalin Edition管理驱动</h4>
+                        <ol>
+                            <li>安装AMD驱动后，系统会自动安装AMD Software: Adrenalin Edition</li>
+                            <li>打开软件，点击"驱动程序和软件"选项卡</li>
+                            <li>可以查看当前驱动版本，并检查更新</li>
+                            <li>点击"检查更新"获取最新驱动</li>
+                            <li>按照提示完成更新安装</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="optimization-section">
+                        <h3>四、驱动安装注意事项</h3>
+                        <ul>
+                            <li>安装新驱动前，建议先卸载旧驱动，避免冲突</li>
+                            <li>可以使用DDU（Display Driver Uninstaller）工具彻底卸载旧驱动</li>
+                            <li>定期检查并更新驱动，以获得最佳性能和兼容性</li>
+                            <li>如果安装驱动后出现问题，可以尝试回滚到之前的稳定版本</li>
+                            <li>笔记本电脑用户建议优先使用厂商提供的驱动，以确保兼容性</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 电脑世界. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

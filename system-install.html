@@ -25,6 +25,7 @@
                 <li class="nav-item"><a href="tutorial.html?type=desktop" class="nav-link">台式电脑安装</a></li>
                 <li class="nav-item"><a href="tutorial.html?type=laptop" class="nav-link">笔记本电脑</a></li>
                 <li class="nav-item"><a href="system-install.html" class="nav-link">系统安装/重装</a></li>
+                <li class="nav-item"><a href="optimization.html" class="nav-link">优化</a></li>
                 <li class="nav-item"><a href="troubleshooting.html" class="nav-link">故障排除</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">关于我们</a></li>
             </ul>
@@ -235,6 +236,73 @@
                             <li>选择要安装的软件包和组件</li>
                             <li>等待系统从网络下载并安装完成</li>
                         </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块4：如何分区（添加新的盘符，如D盘） -->
+            <div class="system-module scroll-animation">
+                <div class="module-header">
+                    <div class="module-number">4</div>
+                    <h2 class="module-title">如何分区（添加新的盘符，如D盘）</h2>
+                </div>
+                <div class="module-content">
+                    <p>当您需要从现有硬盘中划分出新的盘符（如D盘）时，可以通过Windows系统自带的磁盘管理工具来完成。以下是详细步骤：</p>
+                    
+                    <div class="step">
+                        <h3>步骤1：打开磁盘管理工具</h3>
+                        <ol>
+                            <li>右键点击桌面上的"此电脑"图标</li>
+                            <li>如果是Windows 11系统，需要先点击"显示更多选项"</li>
+                            <li>在弹出的菜单中，点击"管理"选项</li>
+                            <li>在计算机管理窗口中，点击左侧导航栏的"存储"，然后选择"磁盘管理"</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>步骤2：压缩现有卷</h3>
+                        <p>要创建新的盘符，首先需要从现有磁盘分区中压缩出一部分空间：</p>
+                        <ol>
+                            <li>在磁盘管理窗口的下方图表区域，找到需要划分空间的磁盘分区（例如，从C盘提取空间，就找到"OS C:"）</li>
+                            <li>右键点击该分区，选择"压缩卷"选项</li>
+                            <li>系统会自动分析该分区的可用压缩空间，稍等片刻</li>
+                            <li>在"压缩卷"对话框中，输入要压缩的空间大小（1000MB = 1GB）</li>
+                            <li>点击"压缩"按钮，等待压缩过程完成</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>步骤3：创建新的分区</h3>
+                        <p>压缩完成后，会出现一个未分配的空间，现在可以将其创建为新的盘符：</p>
+                        <ol>
+                            <li>在磁盘管理窗口中，找到刚刚压缩出来的未分配空间（显示为黑色）</li>
+                            <li>右键点击该未分配空间，选择"新建简单卷"选项</li>
+                            <li>进入"新建简单卷向导"，点击"下一步"</li>
+                            <li>指定卷大小（默认为全部可用空间，可根据需要调整），点击"下一步"</li>
+                            <li>分配驱动器号和路径，选择一个可用的驱动器号（如D、E、F等），点击"下一步"</li>
+                            <li>格式化分区，选择文件系统（建议使用NTFS），分配单元大小保持默认，输入卷标（可选），勾选"执行快速格式化"，点击"下一步"</li>
+                            <li>点击"完成"按钮，等待格式化完成</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>步骤4：验证新盘符</h3>
+                        <p>创建完成后，可以通过以下方式验证新盘符是否成功创建：</p>
+                        <ol>
+                            <li>打开"此电脑"</li>
+                            <li>在"设备和驱动器"区域，查看是否出现了新创建的盘符（如D盘）</li>
+                            <li>可以右键点击新盘符，选择"属性"查看详细信息</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>注意事项</h3>
+                        <ul>
+                            <li>压缩卷时，系统会自动计算最大可用压缩空间，建议不要压缩过多，保留足够空间给原分区</li>
+                            <li>格式化过程会清除分区上的所有数据，确保未分配空间中没有重要数据</li>
+                            <li>如果需要创建多个分区，可以重复上述步骤，从未分配空间中继续划分</li>
+                            <li>在Windows 11系统中，右键菜单可能与之前版本有所不同，需要先点击"显示更多选项"才能看到完整菜单</li>
+                        </ul>
                     </div>
                 </div>
             </div>
