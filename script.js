@@ -107,8 +107,19 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// 页面加载动画
+// 汉堡菜单交互
 document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
+    
+    // 页面加载动画
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s ease';
     setTimeout(() => {
