@@ -45,14 +45,41 @@
                 <p>电脑世界是一个专注于电脑知识分享的网站，为用户提供从组装到使用的全方位电脑知识。我们的目标是帮助用户更好地了解和使用电脑，解决各种电脑问题。</p>
             </div>
 
-            <div class="about-section">
+            <div class="about-section" id="updates">
                 <h2>更新内容</h2>
-                <div class="update-info">
-                    <div class="update-version">
-                        <h3>版本 1.0</h3>
-                        <p class="update-date">更新时间：2025-11-27</p>
+                <div class="update-info collapsible-container">
+                    <div class="update-header" onclick="toggleUpdate(this)">
+                        <div class="update-version">
+                            <h3>版本 1.1</h3>
+                            <p class="update-date">更新时间：2025-11-28</p>
+                        </div>
+                        <div class="collapse-btn">
+                            <span class="collapse-icon">▼</span>
+                        </div>
                     </div>
-                    <div class="update-details">
+                    <div class="update-details" style="display: none;">
+                        <h4>主要更新：</h4>
+                        <ul>
+                            <li>在系统安装页面添加硬盘分区教程</li>
+                            <li>在优化页面添加显卡驱动安装教程</li>
+                            <li>在台式电脑安装教程中添加显示器连接步骤</li>
+                            <li>添加显示器连接视频教程链接</li>
+                            <li>删除关于我们页面的联系我们部分</li>
+                            <li>添加网站README说明文档</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="update-info collapsible-container">
+                    <div class="update-header" onclick="toggleUpdate(this)">
+                        <div class="update-version">
+                            <h3>版本 1.0</h3>
+                            <p class="update-date">更新时间：2025-11-27</p>
+                        </div>
+                        <div class="collapse-btn">
+                            <span class="collapse-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="update-details" style="display: none;">
                         <h4>主要更新：</h4>
                         <ul>
                             <li>发布网站初始版本</li>
@@ -65,6 +92,75 @@
                     </div>
                 </div>
             </div>
+            <script>
+                function toggleUpdate(element) {
+                    const container = element.parentElement;
+                    const details = container.querySelector('.update-details');
+                    const icon = container.querySelector('.collapse-icon');
+                    
+                    if (details.style.display === 'none' || details.style.display === '') {
+                        details.style.display = 'block';
+                        icon.textContent = '▲';
+                    } else {
+                        details.style.display = 'none';
+                        icon.textContent = '▼';
+                    }
+                }
+            </script>
+            <style>
+                .collapsible-container {
+                    border: 1px solid #e0e0e0;
+                    border-radius: 8px;
+                    margin-bottom: 15px;
+                    overflow: hidden;
+                    transition: all 0.3s ease;
+                }
+                
+                .update-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 15px;
+                    background-color: #f5f5f5;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+                
+                .update-header:hover {
+                    background-color: #e9e9e9;
+                }
+                
+                .update-header h3 {
+                    margin: 0;
+                    color: #007bff;
+                }
+                
+                .update-header p {
+                    margin: 5px 0 0 0;
+                    color: #666;
+                }
+                
+                .collapse-btn {
+                    font-size: 18px;
+                    color: #666;
+                    transition: transform 0.3s ease;
+                }
+                
+                .update-details {
+                    padding: 0 15px 15px 15px;
+                    background-color: white;
+                    transition: all 0.3s ease;
+                }
+                
+                .update-details h4 {
+                    margin: 15px 0 10px 0;
+                }
+                
+                .update-details ul {
+                    margin: 0;
+                    padding-left: 20px;
+                }
+            </style>
 
             <div class="about-section">
                 <h2>网站特色</h2>
@@ -90,13 +186,6 @@
                         <p class="feature-description">适配各种设备，随时随地学习</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="about-section">
-                <h2>联系我们</h2>
-                <p>如果您有任何问题或建议，欢迎联系我们：</p>
-                <p class="contact-info">邮箱：contact@computerworld.com</p>
-                <p class="contact-info">微信：computer_world</p>
             </div>
         </div>
     </div>
