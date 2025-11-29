@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快捷键教程 - Computer World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .shortcuts-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .shortcuts-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .shortcuts-title {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .shortcuts-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+        }
+        
+        .os-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .os-tab {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #666;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+        }
+        
+        .os-tab.active {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+        }
+        
+        .os-tab:hover {
+            color: #0056b3;
+        }
+        
+        .shortcuts-content {
+            display: none;
+        }
+        
+        .shortcuts-content.active {
+            display: block;
+        }
+        
+        .shortcut-category {
+            margin-bottom: 40px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .shortcut-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .shortcut-table th,
+        .shortcut-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .shortcut-table th {
+            background-color: #e9ecef;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .shortcut-table tr:hover {
+            background-color: #e9ecef;
+        }
+        
+        .shortcut-key {
+            background-color: #e9ecef;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: 600;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">💻</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="shortcuts.html" class="nav-link">快捷键</a></li>
+                <li class="nav-item"><a href="tutorial.html?type=desktop" class="nav-link">台式电脑安装</a></li>
+                <li class="nav-item"><a href="tutorial.html?type=laptop" class="nav-link">笔记本电脑</a></li>
+                <li class="nav-item"><a href="system-install.html" class="nav-link">系统安装/重装</a></li>
+                <li class="nav-item"><a href="optimization.html" class="nav-link">优化</a></li>
+                <li class="nav-item"><a href="troubleshooting.html" class="nav-link">故障排除</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">关于我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 快捷键页面 -->
+    <div class="shortcuts-container">
+        <header class="shortcuts-header">
+            <h1 class="shortcuts-title">快捷键教程</h1>
+            <p class="shortcuts-subtitle">学习各种操作系统的常用快捷键，提高您的工作效率</p>
+        </header>
+
+        <!-- 操作系统选项卡 -->
+        <div class="os-tabs">
+            <button class="os-tab active" onclick="showOS('windows')">Windows</button>
+            <button class="os-tab" onclick="showOS('linux')">Linux</button>
+            <button class="os-tab" onclick="showOS('mac')">Mac</button>
+        </div>
+
+        <!-- Windows快捷键 -->
+        <div id="windows" class="shortcuts-content active">
+            <!-- 系统快捷键 -->
+            <div class="shortcut-category">
+                <h2 class="category-title">系统快捷键</h2>
+                <table class="shortcut-table">
+                    <thead>
+                        <tr>
+                            <th>快捷键</th>
+                            <th>功能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="shortcut-key">Win + D</span></td>
+                            <td>显示桌面</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Win + E</span></td>
+                            <td>打开文件资源管理器</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Win + L</span></td>
+                            <td>锁定电脑</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Win + R</span></td>
+                            <td>打开运行对话框</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + Shift + Esc</span></td>
+                            <td>打开任务管理器</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Alt + Tab</span></td>
+                            <td>切换应用程序</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Win + Tab</span></td>
+                            <td>打开任务视图</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Win + I</span></td>
+                            <td>打开设置</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Win + Shift + S</span></td>
+                            <td>打开截图工具，可选择区域截图</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- PPT快捷键 -->
+            <div class="shortcut-category">
+                <h2 class="category-title">PPT快捷键</h2>
+                <table class="shortcut-table">
+                    <thead>
+                        <tr>
+                            <th>快捷键</th>
+                            <th>功能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="shortcut-key">F5</span></td>
+                            <td>从头开始放映幻灯片</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Shift + F5</span></td>
+                            <td>从当前幻灯片开始放映</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Esc</span></td>
+                            <td>结束幻灯片放映</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">N</span> 或 <span class="shortcut-key">Enter</span></td>
+                            <td>下一张幻灯片</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">P</span></td>
+                            <td>上一张幻灯片</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">B</span> 或 <span class="shortcut-key">.</span></td>
+                            <td>黑屏</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">W</span> 或 <span class="shortcut-key">,</span></td>
+                            <td>白屏</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + M</span></td>
+                            <td>插入新幻灯片</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Word快捷键 -->
+            <div class="shortcut-category">
+                <h2 class="category-title">Word快捷键</h2>
+                <table class="shortcut-table">
+                    <thead>
+                        <tr>
+                            <th>快捷键</th>
+                            <th>功能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + C</span></td>
+                            <td>复制</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + V</span></td>
+                            <td>粘贴</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + X</span></td>
+                            <td>剪切</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + Z</span></td>
+                            <td>撤销</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + Y</span></td>
+                            <td>重做</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + B</span></td>
+                            <td>加粗</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + I</span></td>
+                            <td>斜体</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + U</span></td>
+                            <td>下划线</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Excel快捷键 -->
+            <div class="shortcut-category">
+                <h2 class="category-title">Excel快捷键</h2>
+                <table class="shortcut-table">
+                    <thead>
+                        <tr>
+                            <th>快捷键</th>
+                            <th>功能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + C</span></td>
+                            <td>复制</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + V</span></td>
+                            <td>粘贴</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + Z</span></td>
+                            <td>撤销</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + Y</span></td>
+                            <td>重做</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + S</span></td>
+                            <td>保存</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + A</span></td>
+                            <td>选择全部</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + F</span></td>
+                            <td>查找</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + H</span></td>
+                            <td>替换</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Linux快捷键 -->
+        <div id="linux" class="shortcuts-content">
+            <!-- 系统快捷键 -->
+            <div class="shortcut-category">
+                <h2 class="category-title">系统快捷键</h2>
+                <table class="shortcut-table">
+                    <thead>
+                        <tr>
+                            <th>快捷键</th>
+                            <th>功能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="shortcut-key">Super + D</span></td>
+                            <td>显示桌面</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Super + E</span></td>
+                            <td>打开文件管理器</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Super + L</span></td>
+                            <td>锁定屏幕</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + Alt + T</span></td>
+                            <td>打开终端</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + Alt + Delete</span></td>
+                            <td>打开系统监控器</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Alt + Tab</span></td>
+                            <td>切换应用程序</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Super + Tab</span></td>
+                            <td>打开应用程序切换器</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + Shift + Esc</span></td>
+                            <td>打开系统监控器</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- PPT快捷键 -->
+            <div class="shortcut-category">
+                <h2 class="category-title">PPT快捷键</h2>
+                <table class="shortcut-table">
+                    <thead>
+                        <tr>
+                            <th>快捷键</th>
+                            <th>功能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="shortcut-key">F5</span></td>
+                            <td>从头开始放映幻灯片</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Shift + F5</span></td>
+                            <td>从当前幻灯片开始放映</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Esc</span></td>
+                            <td>结束幻灯片放映</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">N</span> 或 <span class="shortcut-key">Enter</span></td>
+                            <td>下一张幻灯片</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">P</span></td>
+                            <td>上一张幻灯片</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">B</span> 或 <span class="shortcut-key">.</span></td>
+                            <td>黑屏</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">W</span> 或 <span class="shortcut-key">,</span></td>
+                            <td>白屏</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + M</span></td>
+                            <td>插入新幻灯片</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Word快捷键 -->
+            <div class="shortcut-category">
+                <h2 class="category-title">Word快捷键</h2>
+                <table class="shortcut-table">
+                    <thead>
+                        <tr>
+                            <th>快捷键</th>
+                            <th>功能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + C</span></td>
+                            <td>复制</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + V</span></td>
+                            <td>粘贴</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + X</span></td>
+                            <td>剪切</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + Z</span></td>
+                            <td>撤销</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + Y</span></td>
+                            <td>重做</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + B</span></td>
+                            <td>加粗</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + I</span></td>
+                            <td>斜体</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + U</span></td>
+                            <td>下划线</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Excel快捷键 -->
+            <div class="shortcut-category">
+                <h2 class="category-title">Excel快捷键</h2>
+                <table class="shortcut-table">
+                    <thead>
+                        <tr>
+                            <th>快捷键</th>
+                            <th>功能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + C</span></td>
+                            <td>复制</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + V</span></td>
+                            <td>粘贴</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + Z</span></td>
+                            <td>撤销</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + Y</span></td>
+                            <td>重做</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + S</span></td>
+                            <td>保存</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + A</span></td>
+                            <td>选择全部</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + F</span></td>
+                            <td>查找</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Ctrl + H</span></td>
+                            <td>替换</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Mac快捷键 -->
+        <div id="mac" class="shortcuts-content">
+            <!-- 系统快捷键 -->
+            <div class="shortcut-category">
+                <h2 class="category-title">系统快捷键</h2>
+                <table class="shortcut-table">
+                    <thead>
+                        <tr>
+                            <th>快捷键</th>
+                            <th>功能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="shortcut-key">Command + F3</span></td>
+                            <td>显示桌面</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + Space</span></td>
+                            <td>打开Spotlight搜索</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + L</span></td>
+                            <td>锁定屏幕</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + N</span></td>
+                            <td>新建窗口</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + Tab</span></td>
+                            <td>切换应用程序</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + Option + Esc</span></td>
+                            <td>强制退出应用程序</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + Shift + 3</span></td>
+                            <td>截取整个屏幕</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + Shift + 4</span></td>
+                            <td>截取所选区域</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- PPT快捷键 -->
+            <div class="shortcut-category">
+                <h2 class="category-title">PPT快捷键</h2>
+                <table class="shortcut-table">
+                    <thead>
+                        <tr>
+                            <th>快捷键</th>
+                            <th>功能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="shortcut-key">F5</span></td>
+                            <td>从头开始放映幻灯片</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Shift + F5</span></td>
+                            <td>从当前幻灯片开始放映</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Esc</span></td>
+                            <td>结束幻灯片放映</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">N</span> 或 <span class="shortcut-key">Enter</span></td>
+                            <td>下一张幻灯片</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">P</span></td>
+                            <td>上一张幻灯片</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">B</span> 或 <span class="shortcut-key">.</span></td>
+                            <td>黑屏</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">W</span> 或 <span class="shortcut-key">,</span></td>
+                            <td>白屏</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + M</span></td>
+                            <td>插入新幻灯片</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Word快捷键 -->
+            <div class="shortcut-category">
+                <h2 class="category-title">Word快捷键</h2>
+                <table class="shortcut-table">
+                    <thead>
+                        <tr>
+                            <th>快捷键</th>
+                            <th>功能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="shortcut-key">Command + C</span></td>
+                            <td>复制</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + V</span></td>
+                            <td>粘贴</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + X</span></td>
+                            <td>剪切</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + Z</span></td>
+                            <td>撤销</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + Y</span></td>
+                            <td>重做</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + B</span></td>
+                            <td>加粗</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + I</span></td>
+                            <td>斜体</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + U</span></td>
+                            <td>下划线</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Excel快捷键 -->
+            <div class="shortcut-category">
+                <h2 class="category-title">Excel快捷键</h2>
+                <table class="shortcut-table">
+                    <thead>
+                        <tr>
+                            <th>快捷键</th>
+                            <th>功能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="shortcut-key">Command + C</span></td>
+                            <td>复制</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + V</span></td>
+                            <td>粘贴</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + Z</span></td>
+                            <td>撤销</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + Y</span></td>
+                            <td>重做</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + S</span></td>
+                            <td>保存</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + A</span></td>
+                            <td>选择全部</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + F</span></td>
+                            <td>查找</td>
+                        </tr>
+                        <tr>
+                            <td><span class="shortcut-key">Command + H</span></td>
+                            <td>替换</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 电脑世界. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 操作系统切换功能
+        function showOS(os) {
+            // 隐藏所有内容
+            const contents = document.querySelectorAll('.shortcuts-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // 移除所有选项卡的激活状态
+            const tabs = document.querySelectorAll('.os-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // 显示选中的内容
+            document.getElementById(os).classList.add('active');
+            
+            // 激活选中的选项卡
+            event.target.classList.add('active');
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

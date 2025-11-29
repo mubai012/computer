@@ -22,6 +22,7 @@
                 <span></span>
             </div>
             <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="shortcuts.html" class="nav-link">快捷键</a></li>
                 <li class="nav-item"><a href="tutorial.html?type=desktop" class="nav-link">台式电脑安装</a></li>
                 <li class="nav-item"><a href="tutorial.html?type=laptop" class="nav-link">笔记本电脑</a></li>
                 <li class="nav-item"><a href="system-install.html" class="nav-link">系统安装/重装</a></li>
@@ -47,6 +48,27 @@
 
             <div class="about-section" id="updates">
                 <h2>更新内容</h2>
+                <div class="update-info collapsible-container">
+                    <div class="update-header" onclick="toggleUpdate(this)">
+                        <div class="update-version">
+                            <h3>版本 1.2</h3>
+                            <p class="update-date">更新时间：2025-11-29</p>
+                        </div>
+                        <div class="collapse-btn">
+                            <span class="collapse-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="update-details" style="display: none;">
+                        <h4>主要更新：</h4>
+                        <ul>
+                            <li>添加快捷键教程页面</li>
+                            <li>在导航栏添加"快捷键"选项</li>
+                            <li>添加Windows、Linux和Mac系统的快捷键教程</li>
+                            <li>每个系统教程包含系统快捷键、PPT快捷键、Word快捷键和Excel快捷键</li>
+                            <li>在Windows系统快捷键中添加Win+Shift+S截图功能</li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="update-info collapsible-container">
                     <div class="update-header" onclick="toggleUpdate(this)">
                         <div class="update-version">
