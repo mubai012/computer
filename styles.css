@@ -96,33 +96,51 @@ body {
 /* 英雄区域样式 */
 .hero {
     margin-top: 60px;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #ffffff 0%, #f5f5f7 100%);
+    padding: 100px 20px 80px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 80px;
     min-height: calc(100vh - 60px);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(0, 113, 227, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
 }
 
 .hero-content {
-    max-width: 500px;
+    max-width: 550px;
     animation: fadeInLeft 1s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-title {
-    font-size: 56px;
+    font-size: 64px;
     font-weight: 700;
     line-height: 1.1;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #1d1d1f;
+    letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
     color: #6e6e73;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
 .hero-note {
@@ -134,104 +152,229 @@ body {
 
 .hero-buttons {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 24px;
-    border-radius: 25px;
+    padding: 14px 32px;
+    border-radius: 30px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
     transition: all 0.3s ease;
     cursor: pointer;
     border: none;
     outline: none;
+    min-width: 120px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 .btn-primary {
     background-color: #0071e3;
     color: white;
+    box-shadow: 0 4px 15px rgba(0, 113, 227, 0.2);
 }
 
 .btn-primary:hover {
     background-color: #0077ed;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 113, 227, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 113, 227, 0.3);
 }
 
 .btn-secondary {
-    background-color: #f5f5f7;
+    background-color: white;
     color: #1d1d1f;
     border: 1px solid #d2d2d7;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .btn-secondary:hover {
-    background-color: #e8e8ed;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f7;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .hero-image {
-    max-width: 600px;
+    max-width: 650px;
     animation: fadeInRight 1s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-image img {
     width: 100%;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border-radius: 28px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .hero-image img:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
 }
 
 /* 特色区域样式 */
 .features {
-    padding: 80px 20px;
+    padding: 100px 20px;
     background-color: white;
     display: flex;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
+    position: relative;
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
 }
 
 .feature-item {
-    max-width: 250px;
+    max-width: 280px;
     text-align: center;
-    padding: 30px;
-    border-radius: 15px;
-    background-color: #f5f5f7;
+    padding: 40px 30px;
+    border-radius: 20px;
+    background-color: #fafafa;
     transition: all 0.3s ease;
     animation: fadeInUp 1s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0071e3, #00aaff);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .feature-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
     background-color: white;
+    border-color: rgba(0, 113, 227, 0.1);
+}
+
+.feature-item:hover::before {
+    transform: scaleX(1);
 }
 
 .feature-icon {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 64px;
+    margin-bottom: 25px;
+    color: #0071e3;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+    transform: scale(1.1);
 }
 
 .feature-title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     margin-bottom: 15px;
     color: #1d1d1f;
+    letter-spacing: -0.01em;
 }
 
 .feature-description {
-    font-size: 14px;
+    font-size: 16px;
     color: #6e6e73;
-    line-height: 1.5;
+    line-height: 1.7;
+}
+
+/* 新功能链接样式优化 */
+.new-feature-link {
+    font-size: 19px;
+    margin-bottom: 30px;
+    display: inline-block;
+    font-style: italic;
+    position: relative;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: #0071e3;
+    padding-bottom: 5px;
+}
+
+/* 下划线样式 */
+.new-feature-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0071e3;
+    transition: width 0.3s ease;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* 鼠标悬停效果 */
+.new-feature-link:hover {
+    transform: translateY(-3px); /* 向上跳出动画，幅度适中 */
+    color: #0056b3;
+}
+
+.new-feature-link:hover::after {
+    width: 100%; /* 横线渐显 */
+    opacity: 1;
+}
+
+/* 新功能注释样式 */
+.new-feature-note {
+    font-size: 12px;
+    color: #8e8e93; /* 苹果风格灰色注释色 */
+    font-style: italic;
+    margin-left: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.new-feature-link:hover .new-feature-note {
+    opacity: 0.9; /* 悬停时稍微提高透明度 */
 }
 
 /* 教程页面样式 */
@@ -1079,6 +1222,94 @@ body {
     margin-top: 30px;
 }
 
+/* 手机维修页面样式优化 */
+#repair-categories {
+    background-color: white;
+    padding: 80px 20px;
+    margin: 40px 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+#repair-categories .section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1d1d1f;
+}
+
+#repair-categories .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#repair-categories .feature-item {
+    background-color: #f5f5f7;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+#repair-categories .feature-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0071e3, #00aaff);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+#repair-categories .feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+#repair-categories .feature-item:hover::before {
+    transform: scaleX(1);
+}
+
+#repair-categories .feature-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    color: #0071e3;
+    transition: transform 0.3s ease;
+}
+
+#repair-categories .feature-item:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+#repair-categories .feature-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1d1d1f;
+}
+
+#repair-categories .feature-description {
+    font-size: 16px;
+    color: #6e6e73;
+    line-height: 1.6;
+}
+
+/* 手机维修英雄区域优化 */
+.hero {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+}
+
 .contact-info {
     font-size: 16px;
     color: #6e6e73;
@@ -1162,4 +1393,303 @@ code {
     font-family: monospace;
     font-size: 14px;
     color: #d73a49;
+}
+
+/* 手机维修页面样式 */
+#repair-tutorials {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.tutorials {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #1d1d1f;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #0071e3;
+    border-radius: 2px;
+}
+
+.tutorials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.tutorial-item {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tutorial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 113, 227, 0.2);
+}
+
+.tutorial-icon {
+    font-size: 64px;
+    margin-bottom: 25px;
+    display: block;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tutorial-item:hover .tutorial-icon {
+    transform: scale(1.1);
+}
+
+.tutorial-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1d1d1f;
+    text-align: center;
+}
+
+.tutorial-description {
+    font-size: 16px;
+    color: #6e6e73;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tutorial-steps {
+    list-style: none;
+    padding: 0;
+    counter-reset: step-counter;
+}
+
+.tutorial-steps li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    color: #6e6e73;
+    line-height: 1.6;
+    font-size: 15px;
+    background-color: #f8f9fa;
+    padding: 15px 20px 15px 40px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.tutorial-steps li:hover {
+    background-color: #e8f4fd;
+    color: #0056b3;
+    transform: translateX(5px);
+}
+
+.tutorial-steps li::before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0071e3;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* 品牌特定主题样式 */
+/* Apple 主题 */
+.hero-apple {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f7 100%);
+}
+
+.hero-apple .section-title::after {
+    background-color: #0071e3;
+}
+
+/* OPPO 主题 */
+.hero-oppo {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+}
+
+.hero-oppo .section-title::after {
+    background-color: #00c9ff;
+}
+
+/* vivo 主题 */
+.hero-vivo {
+    background: linear-gradient(135deg, #ffffff 0%, #fff5ee 100%);
+}
+
+.hero-vivo .section-title::after {
+    background-color: #ff6b6b;
+}
+
+/* 华为 主题 */
+.hero-huawei {
+    background: linear-gradient(135deg, #ffffff 0%, #e8f5e8 100%);
+}
+
+.hero-huawei .section-title::after {
+    background-color: #4caf50;
+}
+
+/* 小米 主题 */
+.hero-xiaomi {
+    background: linear-gradient(135deg, #ffffff 0%, #fff3e0 100%);
+}
+
+.hero-xiaomi .section-title::after {
+    background-color: #ff9800;
+}
+
+/* 红米 主题 */
+.hero-redmi {
+    background: linear-gradient(135deg, #ffffff 0%, #ffebee 100%);
+}
+
+.hero-redmi .section-title::after {
+    background-color: #f44336;
+}
+
+/* 维修服务部分样式 */
+#repair-services {
+    padding: 80px 20px;
+    background-color: #f5f5f7;
+}
+
+.services {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.service-item {
+    text-align: center;
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #0071e3, #00c9ff);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover::before {
+    transform: scaleX(1);
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.service-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1d1d1f;
+    transition: color 0.3s ease;
+}
+
+.service-item:hover .service-title {
+    color: #0071e3;
+}
+
+.service-description {
+    font-size: 14px;
+    color: #6e6e73;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover .service-description {
+    color: #333;
+}
+
+/* 滚动动画效果 */
+.tutorial-item, .service-item {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.tutorial-item:nth-child(1), .service-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.tutorial-item:nth-child(2), .service-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.tutorial-item:nth-child(3), .service-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.tutorial-item:nth-child(4), .service-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

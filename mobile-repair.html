@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手机世界 - Mobile World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">💻</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="shortcuts.html" class="nav-link">快捷键</a></li>
+                <li class="nav-item"><a href="tutorial.html?type=desktop" class="nav-link">台式电脑安装</a></li>
+                <li class="nav-item"><a href="tutorial.html?type=laptop" class="nav-link">笔记本电脑</a></li>
+                <li class="nav-item"><a href="mobile-repair.html" class="nav-link">手机维修</a></li>
+                <li class="nav-item"><a href="system-install.html" class="nav-link">系统安装/重装</a></li>
+                <li class="nav-item"><a href="optimization.html" class="nav-link">优化</a></li>
+                <li class="nav-item"><a href="troubleshooting.html" class="nav-link">故障排除</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">关于我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">探索手机的无限可能</h1>
+            <p class="hero-subtitle">从维修到使用，我们为您提供全方位的手机知识</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="openRepairModal()">开始维修</button>
+                <a href="about.html" class="btn btn-secondary">了解更多</a>
+            </div>
+            
+            <!-- 维修模态窗口 -->
+            <div id="repairModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>选择维修信息</h2>
+                        <span class="close" onclick="closeRepairModal()">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="phoneBrand">请选择您的手机品牌：</label>
+                            <select id="phoneBrand" class="form-select">
+                                <option value="">-- 请选择品牌 --</option>
+                                <option value="apple">Apple（苹果）</option>
+                                <option value="oppo">OPPO</option>
+                                <option value="vivo">vivo</option>
+                                <option value="huawei">华为</option>
+                                <option value="xiaomi">小米</option>
+                                <option value="redmi">红米</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="repairType">请选择维修类型：</label>
+                            <select id="repairType" class="form-select">
+                                <option value="">-- 请选择维修类型 --</option>
+                                <option value="physical">物理维修（屏幕、电池等）</option>
+                                <option value="system">系统维修（卡顿、崩溃等）</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" onclick="closeRepairModal()">取消</button>
+                        <button class="btn btn-primary" onclick="submitRepairRequest()">提交维修请求</button>
+                    </div>
+                </div>
+            </div>
+            
+            <style>
+                /* 模态窗口样式 */
+                .modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 1000;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    animation: fadeIn 0.3s ease;
+                }
+                
+                .modal-content {
+                    background-color: white;
+                    margin: 10% auto;
+                    padding: 0;
+                    border-radius: 12px;
+                    width: 90%;
+                    max-width: 500px;
+                    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                    animation: slideIn 0.3s ease;
+                }
+                
+                .modal-header {
+                    background-color: #f8f9fa;
+                    padding: 20px;
+                    border-bottom: 1px solid #e0e0e0;
+                    border-radius: 12px 12px 0 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                
+                .modal-header h2 {
+                    margin: 0;
+                    color: #333;
+                    font-size: 1.5rem;
+                }
+                
+                .close {
+                    color: #aaa;
+                    font-size: 28px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: color 0.3s ease;
+                }
+                
+                .close:hover {
+                    color: #000;
+                }
+                
+                .modal-body {
+                    padding: 20px;
+                }
+                
+                .modal-footer {
+                    background-color: #f8f9fa;
+                    padding: 20px;
+                    border-top: 1px solid #e0e0e0;
+                    border-radius: 0 0 12px 12px;
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 10px;
+                }
+                
+                .form-group {
+                    margin-bottom: 20px;
+                }
+                
+                .form-group label {
+                    display: block;
+                    margin-bottom: 8px;
+                    font-weight: 500;
+                    color: #333;
+                }
+                
+                .form-select, .form-input, .form-textarea {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #e0e0e0;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    transition: border-color 0.3s ease;
+                }
+                
+                .form-select:focus, .form-input:focus, .form-textarea:focus {
+                    outline: none;
+                    border-color: #007bff;
+                    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+                }
+                
+                .form-textarea {
+                    resize: vertical;
+                    min-height: 100px;
+                }
+                
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                
+                @keyframes slideIn {
+                    from { transform: translateY(-50px); opacity: 0; }
+                    to { transform: translateY(0); opacity: 1; }
+                }
+            </style>
+            
+            <script>
+                // 模态窗口功能
+                function openRepairModal() {
+                    document.getElementById("repairModal").style.display = "block";
+                }
+                
+                function closeRepairModal() {
+                    document.getElementById("repairModal").style.display = "none";
+                }
+                
+                function submitRepairRequest() {
+                    const brand = document.getElementById("phoneBrand").value;
+                    const repairType = document.getElementById("repairType").value;
+                    
+                    if (!brand) {
+                        alert("请选择手机品牌");
+                        return;
+                    }
+                    
+                    if (!repairType) {
+                        alert("请选择维修类型");
+                        return;
+                    }
+                    
+                    // 根据品牌和维修类型跳转到对应的维修页面
+                    let repairPage = "";
+                    
+                    // 构建页面路径：品牌-维修类型-repair.html
+                    repairPage = `${brand}-${repairType}-repair.html`;
+                    
+                    // 跳转到对应的维修页面
+                    window.location.href = repairPage;
+                    closeRepairModal();
+                }
+                
+                // 点击模态窗口外部关闭
+                window.onclick = function(event) {
+                    const modal = document.getElementById("repairModal");
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="手机展示">
+        </div>
+    </section>
+
+    <!-- 手机维修类别 -->
+    <section id="repair-categories" class="features">
+        <h2 class="section-title">手机维修服务</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">📱</div>
+                <h3 class="feature-title">屏幕维修</h3>
+                <p class="feature-description">专业的手机屏幕更换和修复服务，包括碎屏、触摸失灵等问题</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔋</div>
+                <h3 class="feature-title">电池更换</h3>
+                <p class="feature-description">提供高品质电池更换服务，解决电池鼓包、续航短等问题</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔊</div>
+                <h3 class="feature-title">音频维修</h3>
+                <p class="feature-description">修复扬声器、麦克风、耳机孔等音频相关问题</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔌</div>
+                <h3 class="feature-title">充电维修</h3>
+                <p class="feature-description">解决充电慢、无法充电、充电接口松动等问题</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📷</div>
+                <h3 class="feature-title">摄像头维修</h3>
+                <p class="feature-description">修复前后摄像头、闪光灯等拍照相关问题</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔒</div>
+                <h3 class="feature-title">系统修复</h3>
+                <p class="feature-description">解决系统卡顿、崩溃、无法开机等软件问题</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 电脑世界. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

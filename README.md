@@ -35,7 +35,13 @@
 - 电脑卡顿的解决方法
 - 电脑自动关机的解决方法
 
-### 6. 关于我们
+### 6. 手机维修
+- 多品牌手机维修教程（Apple、OPPO、vivo、华为、小米、红米）
+- 物理维修（屏幕、电池、充电接口、扬声器等）
+- 系统维修（卡顿、崩溃、无法开机等）
+- 首页弹窗快速选择维修类型
+
+### 7. 关于我们
 - 网站介绍
 - 更新日志
 
@@ -43,15 +49,37 @@
 
 ```
 电脑维修/
-├── index.html          # 首页
-├── tutorial.html       # 电脑安装教程
-├── system-install.html # 系统安装/重装教程
-├── optimization.html   # 电脑优化教程
-├── troubleshooting.html # 故障排除教程
-├── about.html          # 关于我们
-├── styles.css          # 样式文件
-├── script.js           # JavaScript文件
-└── README.md           # 网站说明文档
+├── index.html                  # 首页
+├── mobile-repair.html          # 手机维修主页面
+├── tutorial.html               # 电脑安装教程
+├── system-install.html         # 系统安装/重装教程
+├── optimization.html           # 电脑优化教程
+├── troubleshooting.html        # 故障排除教程
+├── about.html                  # 关于我们
+├── styles.css                  # 样式文件
+├── script.js                   # JavaScript文件
+├── README.md                   # 网站说明文档
+├── shortcuts.html              # 快捷键教程
+├── # 手机维修品牌页面
+├── apple-repair.html           # Apple手机维修主页面
+├── oppo-repair.html            # OPPO手机维修主页面
+├── vivo-repair.html            # vivo手机维修主页面
+├── huawei-repair.html          # 华为手机维修主页面
+├── xiaomi-repair.html          # 小米手机维修主页面
+├── redmi-repair.html           # 红米手机维修主页面
+├── # 手机维修-类型组合页面
+├── apple-physical-repair.html  # Apple物理维修页面
+├── apple-system-repair.html    # Apple系统维修页面
+├── oppo-physical-repair.html   # OPPO物理维修页面
+├── oppo-system-repair.html     # OPPO系统维修页面
+├── vivo-physical-repair.html   # vivo物理维修页面
+├── vivo-system-repair.html     # vivo系统维修页面
+├── huawei-physical-repair.html # 华为物理维修页面
+├── huawei-system-repair.html   # 华为系统维修页面
+├── xiaomi-physical-repair.html # 小米物理维修页面
+├── xiaomi-system-repair.html   # 小米系统维修页面
+├── redmi-physical-repair.html  # 红米物理维修页面
+└── redmi-system-repair.html    # 红米系统维修页面
 ```
 
 ## 技术特点
@@ -65,10 +93,13 @@
 
 ## 内容更新
 
-- 2025-11-27：添加硬盘分区教程和显卡驱动安装教程
-- 2025-11-26：添加电脑优化页面和故障排除页面
-- 2025-11-25：添加系统安装/重装页面
-- 2025-11-24：添加电脑安装教程页面
+- 2025-12-11：版本1.5 - 增强手机维修功能，添加首页维修弹窗，包含品牌和维修类型选择，自动跳转到对应维修页面
+- 2025-12-11：版本1.4 - 添加手机维修功能，包括导航栏按钮和手机维修页面
+- 2025-11-29：版本1.2 - 添加快捷键教程页面，包含Windows、Linux和Mac系统快捷键
+- 2025-11-28：版本1.1 - 添加硬盘分区教程和显卡驱动安装教程
+- 2025-11-27：添加电脑优化页面和故障排除页面
+- 2025-11-26：添加系统安装/重装页面
+- 2025-11-25：添加电脑安装教程页面
 - 2025-11-23：创建网站首页
 
 ## 未来计划
